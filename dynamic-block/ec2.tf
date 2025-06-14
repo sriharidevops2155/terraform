@@ -17,11 +17,9 @@ resource "aws_security_group" "allow_all" {
       from_port        = ingress.value["from_port"]
       to_port          = ingress.value["from_port"]
       protocol         = "-1"
-      cidr_blocks      = ["0.0.0.0/0"]
+      cidr_blocks      = var.cidr_blocks
       ipv6_cidr_blocks = ["::/0"]
-
     }
-
   }
 
   egress {
