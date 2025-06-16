@@ -14,7 +14,6 @@ variable "ec2_tags" {
         Name = "RoboShop"  #in tag if Name is there then we must should give Capital N i.e Name
         Purpose = "Variables-demo" 
     }
-  
 }
 
 variable "sg_name" {

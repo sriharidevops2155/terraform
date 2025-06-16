@@ -30,7 +30,7 @@ resource "aws_instance" "roboshop" {
    provisioner "remote-exec" {
     when = destroy
     inline = [
-      "sudo systemctl stop nginx",
+      "sudo systemctl stop nginx"
     ]
   }
 } 
