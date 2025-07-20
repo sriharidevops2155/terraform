@@ -4,7 +4,7 @@ resource "aws_instance" "roboshop" {
   vpc_security_group_ids = local.sg_id
 #  vpc_security_group_ids = [ aws_security_group.allow_all.id ]
   tags = {
-    Name = "Roboshop"
+    Name = "Hellow-World"
   }
 }
 
@@ -28,9 +28,9 @@ resource "aws_security_group" "allow_all" {
         ipv6_cidr_blocks = ["::/0"]
     }
     
-  lifecycle {
+/*   lifecycle {
     create_before_destroy = true
-  }
+  } */
 
   tags = {
     Name = "allow_all"

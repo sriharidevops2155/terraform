@@ -1,4 +1,4 @@
-resource "aws_security_group" "allow_all" {
+resource "aws_security_group" "allow_all_dev" {
   name        = "allow_all_dev"
   description = "Allow all traffic"
   #vpc_id      = aws_vpc.main.id
@@ -21,9 +21,10 @@ resource "aws_security_group" "allow_all" {
   tags = {
     Name = "allow-all-dev"
   }
+  provider = aws.dev
 }
 
-resource "aws_security_group" "allow_all" {
+resource "aws_security_group" "allow_all_prod" {
   name        = "allow_all_prod"
   description = "Allow all traffic"
   #vpc_id      = aws_vpc.main.id
@@ -46,4 +47,5 @@ resource "aws_security_group" "allow_all" {
   tags = {
     Name = "allow_all-prod"
   }
+  provider = aws.prod
 }
