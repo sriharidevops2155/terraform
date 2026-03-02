@@ -8,6 +8,7 @@ resource "aws_instance" "roboshop" {
 
   tags = {
     Name = each.value
+    #Name = each.key
   }
 }
 

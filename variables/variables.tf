@@ -9,7 +9,7 @@ variable "instance_type" {
 }
 
 variable "ec2_tags" {
-    type = map(string)
+    type = map(string)     #either we can keep as map or map(string) 
     default = {
         Name = "RoboShop"  #in tag if Name is there then we must should give Capital N i.e Name
         Purpose = "Variables-demo" 
@@ -18,7 +18,7 @@ variable "ec2_tags" {
 }
 
 variable "sg_name" {
-    default = "vars-fileallow-all"
+    default = "allow-all"
 }
 
 variable "sg_description" {
@@ -36,7 +36,7 @@ variable "to_port" {
 }
 
 variable "cidr_blocks" {
-    type = list(string)
+    type = list(string)      #either we can keep as list or list(string) 
     default = ["0.0.0.0/0"]
   
 }
