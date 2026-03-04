@@ -5,4 +5,5 @@ resource "aws_route53_record" "www" {
   type    = "A"
   ttl     = 1
   records = [each.value.private_ip]    #This will refer to output.tf
+  allow_overwrite = true
 }
