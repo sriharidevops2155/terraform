@@ -7,7 +7,7 @@ terraform {
   }
    backend "s3" {  #Dont save the state file in local and save the state file in below S3 bucket 
     bucket = "daws84s-remote-state-sriharibandi"   
-    key    = "remote-state-demo"
+    key    = "remote-state-demo"     # In Above bucket with this key name the state file will be created
     region = "us-east-1"
     encrypt = true
     use_lockfile = true # Enable native S3 locking

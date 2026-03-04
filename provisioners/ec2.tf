@@ -17,8 +17,8 @@ resource "aws_instance" "roboshop" {
   connection {
     type     = "ssh"
     user     = "ec2-user"
-    password = "DevOps321"
-    host     = self.public_ip
+    password = "DevOps321"    
+    host     = self.public_ip  # since it is from our laptop we should use Public IP
   }
 
   provisioner "remote-exec" {
